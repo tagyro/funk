@@ -1,7 +1,7 @@
 import fetch from "node-fetch"
 
 exports.handler = async (event, context, callback) => {
-    const behanceEndpoint = `https://itunes.apple.com/de/rss/customerreviews/id=1438105898/sortBy=mostRecent/xml`
+    const behanceEndpoint = `https://itunes.apple.com/de/rss/customerreviews/id=1438105898/sortBy=mostRecent/json`
     const response = await fetch(behanceEndpoint)
     const data = await response.json()
     return  {
